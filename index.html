@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<title>Editable Jquery Plugin</title>
+        <link rel="stylesheet" type="text/css" href="css/jquery.editable.css"/>
+        <script src="scripts/jquery.js"></script>
+        <script src="scripts/jquery.editable.js"></script>
+    </head>
+	<body>
+        <div class="container">
+            <h1>Demo of Jquery Editable Plugin</h1>
+            <p>This plugin makes an element(input) editable and provides a callback after the user has entered data. The callback can be used to update information to the server or anything of that sort.</p>
+
+            <h2>Example</h2>
+            <p>The element below has been made editable, when ever you edit some information an alert with the new information will be displayed</p>
+            <p><input name="editable_1" class="editable" id="first_element" value="Hover over me :-) "></p>
+            <p><input name="editable_2" class="editable" id="second_element" value="Edit Me"></p>
+            <p><input name="editable_3" class="editable" id="third_element" value="Hover over me too :-)"></p>
+            
+            <h3>Log:</h3>
+            <div id="log">
+
+            </div>
+		</div>
+    </body>
+    <script>
+        $(document).ready(function(){
+            $('.editable').editable({
+            // a callback to display the log , once the user has entered some data 
+                update_value:function(ele){
+                    $('#log').append('<br/>User entered "<b>' + ele.val() + '</b>" in ' + ele.attr('id'));
+                }   
+            });
+        });
+    </script>
+</html>
+<!-- anand@sanandnarayan.com -->

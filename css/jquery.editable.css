@@ -1,0 +1,13 @@
+.jq-editable {
+    border:1px solid #fff !important;
+    padding:3px;
+}
+.jq-editable:hover, .jq-editable:focus {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.199219) 0px 1px 4px inset;
+    border: 1px solid #AAA !important;
+    border-bottom-left-radius: 3px 3px;
+    border-bottom-right-radius: 3px 3px;
+    border-top-left-radius: 3px 3px;
+    border-top-right-radius: 3px 3px;
+}
+
